@@ -22,7 +22,7 @@ public class AccountTest {
         testAccount.remove(20);
 
         if (testAccount.remove(20))  {
-
+            assertThat(testAccount.getBalance() == 80);
         }
     }
 }
