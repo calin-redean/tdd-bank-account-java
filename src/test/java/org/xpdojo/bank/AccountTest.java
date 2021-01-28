@@ -12,7 +12,17 @@ public class AccountTest {
 
         Account testAccount = new Account();
         if (testAccount.add(20))
+            assertThat(testAccount.getBalance() == 20);
+    }
 
-        assertThat(testAccount.getBalance() == 20);
+    @Test
+    public void withdrawAGoodAmountOfCash(){
+        Account testAccount = new Account();
+        testAccount.add(100);
+        testAccount.remove(20);
+
+        if (testAccount.remove(20))  {
+
+        }
     }
 }
